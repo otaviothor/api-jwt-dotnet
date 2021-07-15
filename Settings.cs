@@ -2,6 +2,6 @@ namespace Shop
 {
   public static class Settings
   {
-    public static string Secret = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+    public static string Secret = "fedaf7d8863b48e197b9287d492b708e";
   }
 }
