@@ -13,8 +13,8 @@ O projeto é uma implementação básica de autenticação em API com ASP.NET Co
 
 ## :twisted_rightwards_arrows: Branches
 
-- [main - Projeto feito com .NET 3.1](/)
-- [feat/net-5 - Projeto feito com .NET 5.0](/tree/feat/net-5)
+- [main - Projeto feito com .NET 3.1](https://github.com/otaviothor/api-jwt-dotnet)
+- [feat/net-5 - Projeto feito com .NET 5.0](https://github.com/otaviothor/api-jwt-dotnet/tree/feat/net-5)
 
 ## 🚀 Como executar
 
