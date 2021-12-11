@@ -1,56 +1,33 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Shop.Models;
-using System;
-using Microsoft.AspNetCore.Authorization;
-using System.Linq;
-using Shop.Services;
-using Shop.Repositories;
+using Microsoft.Extensions.Logging;
+using ApiAuth.Models;
 
-namespace Show.Controllers
+namespace ApiAuth.Controllers
 {
-  [Route("v1/account")]
   public class HomeController : Controller
   {
-    [HttpPost]
-    [Route("login")]
-    [AllowAnonymous]
-    public async Task<ActionResult<dynamic>> Authenticate([FromBody] User model)
+    private readonly ILogger<HomeController> _logger;
+
+    public HomeController(ILogger<HomeController> logger)
     {
-      var user = UserRepository.Get(model.Username, model.Password);
-
-      if (user == null)
-        return NotFound(new { message = "Usuário ou senha inválidos" });
-
-      var token = TokenService.GenerateToken(user);
-      user.Password = "";
-
-      return new 
-      {
-        user = user,
-        token = token
-      };
+      _logger = logger;
     }
 
-    [HttpGet]
-    [Route("anonymous")]
-    [AllowAnonymous]
-    public string Anonymous() => "Anônimo";
+    public IActionResult Index()
+    {
+      return View();
+    }
 
-    [HttpGet]
-    [Route("authenticated")]
-    [Authorize]
-    public string Authenticated() => String.Format("Autenticado - {0}", User.Identity.Name);
+    public IActionResult Privacy()
+    {
+      return View();
+    }
 
-    [HttpGet]
-    [Route("employee")]
-    [Authorize(Roles = "employee,manager")]
-    public string Employee() => "Funcionário";
-
-    [HttpGet]
-    [Route("manager")]
-    [Authorize(Roles = "manager")]
-    public string Manager() => "Gerente";
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+      return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
   }
 }
