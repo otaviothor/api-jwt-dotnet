@@ -11,6 +11,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto é uma implementação básica de autenticação em API com ASP.NET Core e JWT (JSON Web Token)
 
+## :twisted_rightwards_arrows: Branches
+
+- [main - Projeto feito com .NET 3.1](/)
+- [feat/net-5 - Projeto feito com .NET 5.0](/tree/feat/net-5)
+
 ## 🚀 Como executar
 
 - Clone o repositório
