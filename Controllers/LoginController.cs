@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using ApiAuth.Models;
 using ApiAuth.Repositories;
 using ApiAuth.Services;
@@ -12,7 +11,7 @@ namespace ApiAuth.Controllers
   {
     [HttpPost]
     [Route("login")]
-    public async Task<ActionResult<dynamic>> AuthenticateAsync([FromBody] User model)
+    public ActionResult<dynamic> Authenticate([FromBody] User model)
     {
       var user = UserRepository.Get(model.Username, model.Password);
 
