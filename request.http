@@ -1,0 +1,27 @@
+POST  https://localhost:5001/v1/login HTTP/1.1
+content-type: application/json
+
+{
+	"username": "batman",
+	"password": "robin"
+}
+
+###
+
+GET https://localhost:5001/v1/account/anonymous HTTP/1.1
+
+###
+
+GET https://localhost:5001/v1/account/authenticated HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImJhdG1hbiIsInJvbGUiOiJtYW5hZ2VyIiwibmJmIjoxNjI2MzExNjMyLCJleHAiOjE2MjYzMTg4MzIsImlhdCI6MTYyNjMxMTYzMn0.v-kbvI0KLaybdyAyQQyXWSbIS72biUS4TrJ-KQdr7KM
+
+###
+
+GET https://localhost:5001/v1/account/employee HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InJvYmluIiwicm9sZSI6ImVtcGxveWVlIiwibmJmIjoxNjI2MzExNzA5LCJleHAiOjE2MjYzMTg5MDksImlhdCI6MTYyNjMxMTcwOX0.r1g09i-CM_fatwWbOlLXaI331k_xLH1T4SEd_4EFx9A
+
+###
+
+GET https://localhost:5001/v1/account/manager HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImJhdG1hbiIsInJvbGUiOiJtYW5hZ2VyIiwibmJmIjoxNjI2MzExNjMyLCJleHAiOjE2MjYzMTg4MzIsImlhdCI6MTYyNjMxMTYzMn0.v-kbvI0KLaybdyAyQQyXWSbIS72biUS4TrJ-KQdr7KM
+
