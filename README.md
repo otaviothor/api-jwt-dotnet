@@ -9,7 +9,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O projeto é uma implementação básica de autenticação em API com ASP.NET Core e JWT (JSON Web Token)
+O projeto é uma implementação básica de autenticação em API com ASP.NET Core e JWT (JSON Web Token).
 
 ## :twisted_rightwards_arrows: Branches
 
